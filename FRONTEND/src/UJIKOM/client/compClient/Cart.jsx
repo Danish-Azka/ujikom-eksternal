@@ -9,7 +9,7 @@ const id = localStorage.getItem("idBuyer");
 const Cart = ({ isCartOpen, onClose }) => {
   const [data, setData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
-  const navigate = useNavigate(); // Gunakan useNavigate untuk navigasi
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isCartOpen) fetchCart();
@@ -57,9 +57,14 @@ const Cart = ({ isCartOpen, onClose }) => {
         totalHarga,
       });
 
-      console.log("Transaction created:", response.data);
+      
+      await Promise.all(selectedCartItems.map((item) => deleteCart(item.id)));
+
+      setData(data.filter((item) => !selectedItems.includes(item.id)));
+      setSelectedItems([]);
+
+      alert("Checkout berhasil! Transaksi telah dibuat.");
       onClose();
-      navigate(`/transaksiShop/${response.data.id}`);
     } catch (error) {
       console.error("Error during checkout:", error.response ? error.response.data : error.message);
     }

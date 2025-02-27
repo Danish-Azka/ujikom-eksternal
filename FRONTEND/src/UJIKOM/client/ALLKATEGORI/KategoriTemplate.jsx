@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NavCLient from '../NavCLient';
-import { getProduct } from '../../../../service/apiProduct';
+import NavCLient from '../compClient/NavCLient';
+import { getProduct } from '../../../service/apiProduct';
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavCLient from './compClient/NavCLient'
-import Banner from './compClient/Banner'
-import Kategori from './compClient/ALLKATEGORI/Kategori'
+import Banner from './bannerComp/Banner'
+import Kategori from './ALLKATEGORI/Kategori'
 import bg from '../gu.jpeg'
 
 const ClientSite = () => {

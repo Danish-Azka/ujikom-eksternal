@@ -1,7 +1,7 @@
 import React from 'react';
-import gu from './gu.jpeg';
+import gu from '../gu.jpeg';
 import { useNavigate, useLocation } from 'react-router-dom';
-import AdminProf from '../component/AdminProf';
+import AdminProf from '../../component/AdminProf';
 
 const MenuItem = ({ path, icon, label, isActive, onClick }) => (
   <div className={`w-full h-[10%] rounded-s-xl sideButt ${isActive ? 'bg-white' : ''}`} onClick={onClick}>

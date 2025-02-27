@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { IoCart, IoCube } from "react-icons/io5";
 import Secondside from './SecondSide';
-import { Navbar } from '../component/Navbar';
+import { Navbar } from '../../component/Navbar';
 import { Trash2, PlusCircle } from "lucide-react";
-import ModalTambah from './ProductComp/ModalTambah';
-import { getProductByShopId, deleteProduct } from '../service/apiProduct';
-import ModalDeleteProduk from './ModalDeleteProduk';
+import ModalTambah from './ModalTambah';
+import { getProductByShopId, deleteProduct } from '../../service/apiProduct'
+import ModalDeleteProduk from "./ModalDeleteProduk"
 
 
 const shopMenu = [

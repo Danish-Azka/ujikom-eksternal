@@ -1,10 +1,10 @@
 import React from 'react';
 import { IoCart, IoCube } from "react-icons/io5";
 import Secondside from './SecondSide';
-import { Navbar } from '../component/Navbar';
-import PenjualanPerBulan from './chart/PenjualanPerBulan';
-import Keuntungan from './chart/Keuntungan';
-import BarangTerjual from './chart/BarangTerjual';
+import { Navbar } from '../../component/Navbar';
+import PenjualanPerBulan from '../chart/PenjualanPerBulan';
+import Keuntungan from '../chart/Keuntungan';
+import BarangTerjual from '../chart/BarangTerjual';
 
 const shopMenu = [
   { path: '/penjualan', icon: <IoCart />, label: 'Penjualan' },
